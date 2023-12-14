@@ -1,0 +1,27 @@
+.wrapper {
+  width: 600px;
+  height: 700px;
+  background-color: rgb(87, 87, 87);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+body {
+  background-color: rgb(233, 65, 133);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#dayOfWeek {
+  color: white;
+  font-size: 38px;
+  margin: 100px 0 15px 0;
+}
+
+#currentDate {
+  color: grey;
+}/*# sourceMappingURL=styles.css.map */
