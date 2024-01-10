@@ -3,12 +3,13 @@
   height: 700px;
   background-color: rgb(87, 87, 87);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   margin-top: 100px;
   border-radius: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  padding-bottom: 20px;
 }
 
 body {
@@ -19,9 +20,80 @@ body {
 #dayOfWeek {
   color: white;
   font-size: 38px;
-  margin: 100px 0 15px 0;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 #currentDate {
   color: grey;
+}
+
+.date-container {
+  margin: 100px 0;
+}
+
+.search-input {
+  width: 300px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(72, 72, 72);
+  outline: none;
+}
+.search-input:hover {
+  background-color: #4d4d4d;
+}
+
+.search-button {
+  padding: 15px;
+  width: 70px;
+  border-radius: 5px;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(72, 72, 72);
+  outline: none;
+  color: rgb(233, 65, 133);
+}
+.search-button:hover {
+  background-color: #4d4d4d;
+}
+
+.listItemValue {
+  background-color: rgba(233, 65, 132, 0.512);
+  display: flex;
+  justify-content: space-between;
+  width: 332px;
+  border-radius: 5px;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-right: 4px;
+  color: rgb(238, 122, 168);
+  height: 40px;
+}
+
+.listItemButton {
+  text-align: center;
+  background-color: rgba(242, 71, 139, 0.652);
+  border-radius: 5px;
+  border: 1px solid rgba(233, 65, 132, 0.512);
+  outline: none;
+  color: rgb(238, 122, 168);
+  width: 70px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.listItemButton:hover {
+  background-color: #4d4d4d;
+}
+
+.listWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.listItem {
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */

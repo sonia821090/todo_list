@@ -1,16 +1,19 @@
 $wrapper-color: rgb(87, 87, 87);
 $body-color:rgb(233, 65, 133);
+$input-color: rgb(72, 72, 72);
 .wrapper {
     width: 600px;
     height: 700px;
     background-color: $wrapper-color;
     display: flex;
-    justify-content: center;
+
+    flex-direction: column;
     margin: 0 auto;
     margin-top: 100px;
     border-radius: 1%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+    padding-bottom: 20px;
 }
 body {
     background-color: $body-color;
@@ -19,8 +22,78 @@ body {
 #dayOfWeek {
     color: white;
     font-size: 38px;
-    margin: 100px 0 15px 0;
+    margin: 0;
+    padding-bottom: 10px;
 }
 #currentDate {
     color: grey;
+}
+.date-container {
+    margin: 100px 0;
+}
+@mixin inputAndButton($width) {
+    width: $width;
+}
+.search-input {
+    @include inputAndButton(300px);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(54, 54, 54);
+    background-color: $input-color ;
+    outline: none;
+    &:hover {
+        background-color: lighten($color: rgb(72, 72, 72), $amount: 2);
+    }
+}
+.search-button {
+    padding: 15px;
+    @include inputAndButton(70px);
+    border-radius: 5px;
+    border: 1px solid rgb(54, 54, 54);
+    background-color: rgb(72, 72, 72) ;
+    outline: none;
+    color: $body-color;
+    &:hover {
+        background-color: lighten($color: rgb(72, 72, 72), $amount: 2);
+    }
+}
+.listItemValue {
+    background-color: rgba(233, 65, 132, 0.512); 
+    display: flex;
+    justify-content: space-between;
+    width: 332px;
+    border-radius: 5px;
+    align-items: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-right: 4px;
+    color: rgb(238, 122, 168);
+    height: 40px;
+
+}
+.listItemButton {
+    
+    text-align: center ;
+    background-color: rgba(242, 71, 139, 0.652);
+    border-radius: 5px;
+    border: 1px solid rgba(233, 65, 132, 0.512);
+    outline: none;
+    color: rgb(238, 122, 168);
+    &:hover {
+        background-color: lighten($color: rgb(72, 72, 72), $amount: 2);
+    }
+    @include inputAndButton(70px);
+    height: 40px;
+    margin-bottom: 10px;
+
+}
+.listWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+.listItem {
+    display: flex;
 }
