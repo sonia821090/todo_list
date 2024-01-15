@@ -28,7 +28,7 @@ if (toDoListData?.length > 0) {
 // add tasks
 button.onclick = function() {
     let arr = getTodoList();
-    const newItem = {value: inputElement.value, id: new Date().getTime(),checked:false};
+    const newItem = {value: inputElement.value, id: uuidv4(),checked:false};
 
     generateListItem(newItem);
     if (arr?.length) {
@@ -65,7 +65,7 @@ function generateListItem(item) {
 }; 
 
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
